@@ -1,0 +1,27 @@
+// Theme base
+// ----------
+
+html {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+}
+
+body {
+  font-family: font(primary);
+  font-weight: map-deep-get($font-weights , 'primary', 'normal');
+  font-size: 1rem;
+  line-height: 1.4em;
+  @include theme('theme1');
+}
+
+// Adaptation of Lobotomized Owls Selector on p elements
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+p + p,
+p + img,
+img + p {
+  margin-top: rhythm(1);
+}
+
+.slick-slide {
+  outline: none !important;
+}

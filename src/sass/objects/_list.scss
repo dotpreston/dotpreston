@@ -1,0 +1,7 @@
+.o-li--seperator {
+  background: url('../img/dot.svg') right repeat-y;
+  
+  &:last-child {
+    background: none;
+  }
+}

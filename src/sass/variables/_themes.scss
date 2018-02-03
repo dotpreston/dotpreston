@@ -1,0 +1,22 @@
+// Themes
+// ------
+$themes: (
+  theme1: (
+    color: color(white),
+    link-color: color(sun),
+    hover-color: darken(color(sun), 10%),
+    background: color(mid-grey),
+    ),
+  theme2: (
+    color: color(mid-grey),
+    link-color: color(sun),
+    hover-color: darken(color(sun), 10%),
+    background: color(iron),
+    ),
+  theme3: (
+    color: darken(color(mid-grey), 10%),
+    link-color: color(mid-grey),
+    hover-color: darken(color(mid-grey), 10%),
+    background: color(sun),
+    )
+  );

@@ -1,0 +1,30 @@
+.c-showcase {
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  
+  .slick-next:before, 
+  .slick-prev:before {
+    color: color(sun);
+  }
+  
+  .slick-dots li button:before {
+    color: color(sun);
+    font-size: 10px;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: auto !important;
+    align-self: baseline;
+  }
+}
+
+@media (max-width:768px){
+  .c-showcase__info {
+    text-align: left;
+  }
+}

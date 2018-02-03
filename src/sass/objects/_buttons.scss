@@ -1,0 +1,61 @@
+.btn {
+  font-family: font(primary);
+  font-weight: map-deep-get($font-weights , 'primary', 'bold');
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 0.5em 2em;
+  border: 1px solid color(iron);
+  color: color(iron);
+  letter-spacing: 0.1em;
+  display: inline-block;
+  
+  @include font-size(s1);
+  @include transition(all .2s ease-in-out);
+  @include user-select(none);
+  
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: color(iron);
+    color: color(mid-grey);
+    border: 1px solid color(iron);
+  }
+}
+
+a.btn {
+  color: color(iron);  
+}
+
+.btn--secondary {
+  @extend .btn;
+  border: 1px solid color(mid-grey);
+  color: color(mid-grey);
+
+  &:hover {
+    background-color: color(mid-grey);
+    color: color(iron);
+  }  
+}
+
+a.btn--secondary {
+  color: color(mid-grey);  
+}
+
+.btn--tertiary {
+  @extend .btn;
+  border: 1px solid color(white);
+  color: color(white);
+
+  &:hover {
+    background-color: color(white);
+    color: color(sun);
+  }  
+}
+
+a.btn--tertiary {
+  color: color(white);  
+
+  &:hover {
+    color: color(sun);
+  } 
+}

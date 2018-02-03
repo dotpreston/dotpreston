@@ -1,0 +1,43 @@
+baseurl = "/"
+languageCode = "en-gb"
+languageLang = "en"
+title = "My new Victor-Hugo site"
+
+# RSS, categories and tags disabled for an easy start
+# See configuration options for more details: 
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[params]
+    tel = "07917 797788"
+    email = "andy@dotpreston.co.uk"
+    address = [
+        "52 St Edwards Chase",
+        "Fulwood",
+        "Preston",
+        "PR2 3BF"
+    ]
+
+    [[params.social]]
+        name = "DOT Facebook"
+        url = "https://www.facebook.com/DOTPrestonCreative/"
+        icon = "dot_fb_wo.svg"
+    [[params.social]]
+        name = "DOT Twitter"
+        url = "https://twitter.com/DotPrestonLancs"
+        icon = "dot_tw_wo.svg"
+    [[params.social]]
+        name = "DOT Instagram"
+        url = "https://www.instagram.com/dot_preston/"
+        icon = "dot_insta_wo.svg"
+    [[params.social]]
+        name = "DOT LinkedIn"
+        url = "https://www.linkedin.com/company/dot-preston/"
+        icon = "dot_li_wo.svg"
+
+
+
+[[menu.main]]
+    name = "About"
+    url  = "/about"
+    weight = 1

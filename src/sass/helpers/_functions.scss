@@ -1,0 +1,28 @@
+// Functions
+// ---------
+// General functions for projects
+// ==========
+
+// Maps
+// -----
+// An easy way to get configured maps
+// =====
+
+@function color($color, $map: $colors) {
+	@return map-get($map, $color);
+}
+
+@function font($font, $map: $font-families) {
+    @return map-get($map, $font);
+}
+
+@function font-weight($font-weight, $map: $font-weights) {
+    @return map-get($map, $font-weight);
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

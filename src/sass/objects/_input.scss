@@ -1,0 +1,71 @@
+input, textarea {
+  width: 90%;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  border-bottom: 2px solid color(sun);
+  border-radius: 0;
+  color: color(sun);
+  
+  &:focus,
+  &:hover {
+    outline: none;
+    border-bottom: 2px solid color(iron);
+  }
+}
+
+input[type=checkbox] {
+  width: auto;
+  margin: 5px;
+}
+
+input[type="checkbox"] { 
+  display: none; 
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  @include user-select(none);
+}
+
+input[type="checkbox"] + label:last-child { 
+  margin-bottom: 0; 
+}
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid color(sun);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  @include transition(all .12s, border-color .08s);
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.o-input--centerer {
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+@include placeholder {
+  color: color(iron);
+}

@@ -1,0 +1,25 @@
+/*** Alert ***/
+.o-alert {
+  padding: .75rem 1.25rem;
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.o-alert--danger {
+  @extend .o-alert;
+  background: #F2DEDE;
+  color: #a94442;
+  border-color: #ebcccc;
+
+  a {
+    color: color(mid-grey);
+  }
+}
+
+.o-alert--success {
+  @extend .o-alert;
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}

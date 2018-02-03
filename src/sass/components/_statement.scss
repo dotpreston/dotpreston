@@ -1,0 +1,14 @@
+.c-statement {
+  p {
+     font-family: font(secondary);   
+     @include font-size(t4);
+ }
+}
+
+@media (max-width:575px) {
+    .c-statement {
+      p {  
+        font-size: inherit;
+     }
+ }
+}

@@ -1,0 +1,14 @@
+<ul class="social list-reset m0 pt2">
+    {{ range .Site.Params.social }}
+    <li class="inline-block pr1">
+        <a href="{{.url}}" target="_blank" rel="nofollow">
+            <img src="/img/{{.icon}}" class="u-grow" alt="{{.name}}" />
+        </a>
+    </li>
+    {{ end }}
+    <li class="inline-block">
+        <a href="/contact">
+            <img src="/img/dot_email_wo.svg" class="u-grow" alt="Contact DOT" />
+        </a>
+    </li>
+</ul>

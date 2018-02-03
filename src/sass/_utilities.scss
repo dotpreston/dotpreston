@@ -1,0 +1,15 @@
+.u-grow { 
+    @include transition(all .2s ease-in-out);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.u-alt-color {
+    color: color(sun) !important;
+}
+
+.u-alt-color-2 {
+    color: color(mid-grey) !important;
+}

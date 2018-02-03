@@ -1,0 +1,106 @@
+{{ partial "header" . }}
+
+<section class="c-lead-section jsLeadSection">
+    <div class="container--abs-center jsLeadSectionContainer jsScrollComplete">
+        <div class="clearfix">
+            <div class="col col-3">
+                <a href="/"><img src="https://dotpreston.co.uk/assets/images/DOT_logo_RGB.svg" class="logo right pr3"></a>
+            </div>
+            <div class="col col-9">
+                <div class="c-lead-section__title jsLeadSectionTitle pr2">
+                    <h2 class="t1 mb2 pl3">Impactful Web&nbsp;Design <span>&amp;</span> Innovative Development</h2>
+                    <a href="#home-content" class="c-lead-section__scroll jsLeadSectionScroll ml3 inline-block" data-scroll="home-content" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="home-content">
+    <section class="c-statement l-theme2 clearfix center">
+        <div class="container">
+            <div class="clearfix py4 px2">
+                <div class="sm-col sm-col-12">
+                    {{ with .Site.GetPage "page" "home_intro.md" }}{{ .Content }}{{ end }}
+
+                    <a href="/contact" class="btn--secondary">Get in touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ range where .Pages "Section" "projects" }}
+    {{ .Title }}
+    {{ end }}
+
+    <section class="my4 jsMyWork">
+
+        <div class="c-fixed-header xs-hide sm-hide jsFixedHeader">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="sm-col sm-col-3">
+                        <a href="/projects">
+                            <img src="https://dotpreston.co.uk/assets/images/DOT_logo_RGB.svg" class="right pr3">
+                        </a>
+                    </div>
+                    <div class="sm-col sm-col-9">
+                        <div class="c-fixed-header__title">
+                            <h2 class="t3 pl3">Recent Work</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container c-showcase">
+            <div class="clearfix md-flex mb4 mx2 pb1">
+                <div class="c-showcase__info md-col md-col-3 self-end right-align">
+                    <h3 class="mx1 mb1"><a href="">Base Systems</a></h3>
+                    <p class="m0 mx1">New website build as part of the Base Systems move to new larger premises.</p>
+                </div>
+                <div class="md-col md-col-9">
+
+                    <ul class="carousel list-reset mb0 mt2" data-slick='{"dots": true, "slidesToShow": 1, "slidesToScroll": 1, "prevArrow": false, "nextArrow": false}'>
+                        <li class="mx1">
+                            <a href="">
+                                <img src="https://dotpreston.co.uk/thumbs/projects/base-systems/base-product-800x800.jpg" class="fit o-img--rounded" alt="" />
+                            </a>
+                        </li>
+                        <li class="mx1">
+                            <a href="">
+                                <img src="https://dotpreston.co.uk/thumbs/projects/base-systems/base-product-800x800.jpg" class="fit o-img--rounded" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container c-showcase">
+            <div class="clearfix md-flex mb4 mx2 pb1">
+                <div class="c-showcase__info md-col md-col-3 self-end right-align">
+                    <h3 class="mx1 mb1"><a href="">Base Systems</a></h3>
+                    <p class="m0 mx1">New website build as part of the Base Systems move to new larger premises.</p>
+                </div>
+                <div class="md-col md-col-9">
+
+                    <ul class="carousel list-reset mb0 mt2" data-slick='{"dots": true, "slidesToShow": 1, "slidesToScroll": 1, "prevArrow": false, "nextArrow": false}'>
+                        <li class="mx1">
+                            <a href="">
+                                <img src="https://dotpreston.co.uk/thumbs/projects/base-systems/base-product-800x800.jpg" class="fit o-img--rounded" alt="" />
+                            </a>
+                        </li>
+                        <li class="mx1">
+                            <a href="">
+                                <img src="https://dotpreston.co.uk/thumbs/projects/base-systems/base-product-800x800.jpg" class="fit o-img--rounded" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+{{ partial "footer" . }}

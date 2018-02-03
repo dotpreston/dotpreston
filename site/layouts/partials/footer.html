@@ -1,0 +1,47 @@
+</div>
+
+<footer class="l-theme3 mt4">
+
+  <div class="container">
+    <div class="clearfix py4">
+      <div class="sm-col sm-col-4 contact-details px2 pr3 pl3">
+        <h3 class="t3">DOT</h3>
+        <address class="mb1">
+          {{ range .Site.Params.address }}
+          {{ . }}<br/>
+          {{ end }}
+        </address>
+
+        <p class="mb1">
+          <a href="tel:{{ replace $.Site.Params.tel " " "" }}">{{ $.Site.Params.tel }}</a>
+        </p>
+
+        <p class="mb0">
+          <a href="mailto:{{ $.Site.Params.email }}">{{ $.Site.Params.email }}</a>
+        </p>
+
+        {{ partial "social" . }}
+
+      </div>
+      <div class="sm-col sm-col-8 px2 pl3 xs-hide">
+        <!-- TODO: Latest blog -->
+        <h3 class="t3 mt0 mb1">Latest Blog</h3>
+
+        <h4 class="pb1"></h4>
+
+        <p class="m0 pb1"></p>
+
+        <a href="" class="btn--tertiary mt2">Read more</a>
+
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+</div>
+
+<script src="{{ index .Site.Data.manifest "app.js" }}"></script>
+
+</body>
+</html>

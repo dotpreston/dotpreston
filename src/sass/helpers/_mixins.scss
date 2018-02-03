@@ -1,0 +1,128 @@
+// MIXINS
+// ------
+// General mixins for projects
+// ======
+
+// Center item inside relative parent
+@mixin centerer($left:50%) {
+  position: absolute;
+  top: 50%;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+
+// Center item inside known element size
+@mixin centerer-box($height:50px, $width: 50px) {
+  text-align: center;
+  display: inline-block;
+  line-height: $height;
+  width: $width;
+  height: $height;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+// Lines either side of title without forcing background colour
+@mixin line-title($color) {
+  text-align: center;
+  font-family: font(secondary);
+  &:before, &:after {
+    background-color: $color;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  &:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+}
+
+// Lines either side of title with known background colour
+@mixin line-title-bg($colour: #000, $bg-colour: #fff) {
+  position: relative;
+  text-align: center;
+  font-family: font(secondary);
+  span {
+    background: $bg-colour;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5em;
+  }
+  &:before {
+    background: $colour;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+  }
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin theme($theme, $map : $themes) {
+  background: map-deep-get($map, $theme, "background");
+  color: map-deep-get($map, $theme, "color");
+
+  a {
+    color: map-deep-get($map, $theme, "link-color");  
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: map-deep-get($map, $theme, "hover-color");  
+    }
+  }
+}
+
+@mixin font-size($size, $map : $font-sizes) {
+  font-size: map-deep-get($map, $size, "size");
+  line-height: map-deep-get($map, $size, "line-height");
+}

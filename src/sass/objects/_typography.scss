@@ -1,0 +1,56 @@
+.t1,
+.t2,
+.t3 {
+   font-weight: map-deep-get($font-weights , 'primary', 'normal'); 
+   font-family: font(secondary);
+   letter-spacing: 0.04em;
+}
+
+.t1 {
+  @include font-size(t1); 
+}
+
+.t1--secondary {
+  @include font-size(t1, $font-sizes-secondary);   
+}
+
+.t2 {
+  @include font-size(t2);
+}
+
+.t3 {
+  @include font-size(t3);
+}
+
+.fa {
+  font-size: 1.6em;
+}
+
+h1 {
+    @extend .t1;
+}
+
+h2 {
+    @extend .t2;
+}
+
+h3 {
+    @extend .t3;  
+}
+
+p {
+  margin-bottom: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+  color: color(sun);
+  outline: none;
+}
+
+@media (max-width:736px){
+  .t1 {
+    font-size: 2em;
+  }
+}

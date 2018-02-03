@@ -1,0 +1,10 @@
+hr {
+  border-width: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 1px;
+  overflow: visible;
+  max-width: 175px;
+  margin: 4em auto;
+  background: url('../images/dot-horiz.svg') left repeat-x;
+}

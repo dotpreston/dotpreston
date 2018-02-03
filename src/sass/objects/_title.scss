@@ -1,0 +1,6 @@
+.o-title {
+    font-family: font(secondary);
+    color: color(sun);
+    margin-bottom: 1rem;
+    @include font-size(t2);
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+
+// Font Families
+// ------------
+$font-families: (
+  primary: ('Source Sans Pro', sans-serif),
+  secondary: ('Crimson Text', serif)
+  );
+
+// Font Weights
+// ------------
+$font-weights : (
+  primary: (
+    normal: 300,
+    bold: 700
+    ),
+  secondary: (
+    normal: 400,
+    bold: 700
+    )
+  );
+
+// Font Sizes
+// ------------
+$font-sizes : (
+  t1: (
+    size: 3.3em,
+    line-height: 1.15
+    ),
+  t2: (
+    size: 2.2em,
+    line-height: 1.15
+    ),
+  t3: (
+    size: 1.5em,
+    line-height: 1.15
+    ),
+  t4: (
+    size: 1.25em,
+    line-height: 1.25
+    ),
+  s1: (
+    size: 0.9em,
+    line-height: 1.2   
+    )         
+  );
+
+$font-sizes-secondary : (
+  t1: (
+    size: 1.95em,
+    line-height: 1.25
+    ),
+  t2: (
+    size: 1.7em,
+    line-height: 1.2
+    ),
+  t3: (
+    size: 1.5em,
+    line-height: 1.2
+    )       
+  );

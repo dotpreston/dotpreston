@@ -1,0 +1,17 @@
+footer {
+  .contact-details {
+    text-align: right;
+    background: url('../images/dot-wo.svg') right repeat-y;
+  }
+  h3 {
+    color: color(white);
+  }
+}
+
+@media (max-width:575px) {
+  footer {
+    .contact-details {
+      text-align: left;
+    }
+  }
+}

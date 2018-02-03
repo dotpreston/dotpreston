@@ -1,0 +1,83 @@
+import gulp from "gulp";
+import {spawn} from "child_process";
+import hugoBin from "hugo-bin";
+import gutil from "gulp-util";
+import flatten from "gulp-flatten";
+import gulpSass from "gulp-sass";
+import concat from "gulp-concat";
+import minify from "gulp-minify-css";
+import merge from "merge-stream";
+import BrowserSync from "browser-sync";
+import watch from "gulp-watch";
+import webpack from "webpack";
+import webpackConfig from "./webpack.conf";
+
+const browserSync = BrowserSync.create();
+
+// Hugo arguments
+const hugoArgsDefault = ["-d", "../dist", "-s", "site", "-v"];
+const hugoArgsPreview = ["--buildDrafts", "--buildFuture"];
+
+// Development tasks
+gulp.task("hugo", (cb) => buildSite(cb));
+gulp.task("hugo-preview", (cb) => buildSite(cb, hugoArgsPreview));
+
+// Build/production tasks
+gulp.task("build", ["js", "fonts"], (cb) => buildSite(cb, [], "production"));
+gulp.task("build-preview", ["js", "fonts"], (cb) => buildSite(cb, hugoArgsPreview, "production"));
+
+// Compile Javascript
+gulp.task("js", (cb) => {
+    const myConfig = Object.assign({}, webpackConfig);
+
+    webpack(myConfig, (err, stats) => {
+        if (err) throw new gutil.PluginError("webpack", err);
+        gutil.log("[webpack]", stats.toString({
+            colors: true,
+            progress: true
+        }));
+        browserSync.reload();
+        cb();
+    });
+});
+
+// Move all fonts in a flattened directory
+gulp.task('fonts', () => (
+    gulp.src(["./src/fonts/**/*", "./node_modules/font-awesome/fonts/**/*"])
+        .pipe(flatten())
+        .pipe(gulp.dest("./dist/fonts"))
+        .pipe(browserSync.stream())
+));
+
+// Development server with browsersync
+gulp.task("server", ["hugo", "js", "fonts"], () => {
+    browserSync.init({
+        server: {
+            baseDir: "./dist"
+        }
+    });
+    watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
+    watch("./src/css/**/*.css", () => { gulp.start(["js"]) });
+    watch("./src/sass/**/*.scss", () => { gulp.start(["js"]) });
+    watch("./src/fonts/**/*", () => { gulp.start(["fonts"]) });
+    watch("./site/**/*", () => { gulp.start(["hugo"]) });
+});
+
+/**
+ * Run hugo and build the site
+ */
+function buildSite(cb, options, environment = "development") {
+    const args = options ? hugoArgsDefault.concat(options) : hugoArgsDefault;
+
+    process.env.NODE_ENV = environment;
+
+    return spawn(hugoBin, args, {stdio: "inherit"}).on("close", (code) => {
+        if (code === 0) {
+            browserSync.reload();
+            cb();
+        } else {
+            browserSync.notify("Hugo build failed :(");
+            cb("Hugo build failed");
+        }
+    });
+}

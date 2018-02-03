@@ -1,0 +1,31 @@
+.c-article {
+
+  h2 {
+    margin-bottom: 0.5em;
+    @include font-size(t3);
+  }
+
+  ul {
+    padding: 0 0 1.5em 1em;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+  
+  figure {
+    margin-bottom: 2em;
+    text-align: center;
+    figcaption {
+      text-align: center;
+    }
+  }
+}
+
+.c-article__date {
+ color: darken(color(iron), 10%);
+}

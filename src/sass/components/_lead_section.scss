@@ -1,0 +1,75 @@
+.c-lead-section {
+  height: calc(100vh - #{$header-height});
+  position: relative;
+  
+  .container {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    opacity: 0;
+  }
+
+  img {
+    height: 110px;
+  }
+}
+
+.c-lead-section__title {
+  background: url('../img/dot.svg') left repeat-y;
+  position: relative;
+  overflow: visible !important;
+  
+  h1 {
+    position: relative;
+    display: inline-block;
+    top: -14px;
+    
+    span {
+      color: color(sun);
+      font-size: 1.5em;
+      line-height: 0.8em;
+    }
+  }
+}
+
+.c-lead-section__scroll {
+  height: 21px;
+  width: 22px;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(../images/down_sprite.png) no-repeat;
+  
+  &:hover, 
+  &:focus {
+    background-position: 0 -21px;
+  }
+}
+
+@media (max-width:768px){
+  .c-lead-section {
+    .logo {
+      height: 60px;
+    }
+  }
+
+  .c-lead-section__title {
+    h1 {
+      top: -7px;
+      span {
+        display: block;
+        line-height: 0.85em;
+      }
+    }
+  }
+}
+
+@media (max-width:575px) {
+  .c-lead-section__title {
+    h1 {
+      @include font-size(t3);
+      line-height: 1.15em;
+    }
+  }
+}
