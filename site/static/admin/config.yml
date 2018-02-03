@@ -12,3 +12,8 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/content/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
+      - label: "Home Page"
+        name: "home"
+        file: "site/data/home.toml"
+        fields:
+          - {label: Title 2, name: title, widget: string}

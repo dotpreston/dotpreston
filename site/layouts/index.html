@@ -29,6 +29,8 @@
         </div>
     </section>
 
+    {{ .Site.Data.home.title }}
+
     {{ range where .Pages "Section" "projects" }}
     {{ .Title }}
     {{ end }}
