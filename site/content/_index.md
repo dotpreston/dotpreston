@@ -13,5 +13,8 @@ intro: >-
   \
 
   **Want to know more?**
+images:
+  - name: test
+    url: /img/base-website1.jpg
 ---
 
