@@ -1,4 +1,5 @@
 import Siema from "siema";
+import Blazy from "blazy";
 
 class SiemaWithDots extends Siema {
 
@@ -26,7 +27,10 @@ class SiemaWithDots extends Siema {
         }
     }
 }
-if (document.querySelector('.mydivclass') !== null) {
+if (document.querySelector(".jsProject") !== null) {
+
+    var bLazy = new Blazy({});
+
     const jsSiemaHb = document.querySelector(".jsProject");
     const siemaHb = new SiemaWithDots({
         selector: jsSiemaHb,
@@ -36,7 +40,9 @@ if (document.querySelector('.mydivclass') !== null) {
         },
 
         onChange: function () {
+            var siema_images = document.getElementsByClassName("jsSiemaImage");
             this.updateDots();
+            bLazy.load(siema_images, true);
         },
     });
 }

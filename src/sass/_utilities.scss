@@ -13,3 +13,13 @@
 .u-alt-color-2 {
     color: color(mid-grey) !important;
 }
+
+.b-lazy {
+    @include transition(opacity 500ms ease-in-out);
+    max-width: 100%;
+    opacity: 0;
+}
+
+.b-loaded {
+    opacity: 1 !important;
+}

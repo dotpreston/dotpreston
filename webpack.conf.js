@@ -64,7 +64,7 @@ module.exports = {
             paths: glob.sync(path.join(__dirname, "site/layouts/**/*.html")),
             minimize: true,
             purifyOptions: {
-                whitelist: ["*dots*"]
+                whitelist: ["*dots*", "*loaded*"]
             }
         }),
     ],
