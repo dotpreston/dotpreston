@@ -30,8 +30,6 @@ jQuery(function ($) {
         $('.jsMenuOpen').show();
     });
 
-    $('.carousel').slick();
-
     $(".jsLeadSectionScroll").click(function(e) {
         e.preventDefault();
         var $destination = $(this).attr('data-scroll');

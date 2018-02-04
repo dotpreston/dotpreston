@@ -1,2 +1,2 @@
-import "slick-carousel";
+import "./siema_carousel.js";
 import "./master.js";
