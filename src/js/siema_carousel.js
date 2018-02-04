@@ -26,16 +26,17 @@ class SiemaWithDots extends Siema {
         }
     }
 }
+if (document.querySelector('.mydivclass') !== null) {
+    const jsSiemaHb = document.querySelector(".jsProject");
+    const siemaHb = new SiemaWithDots({
+        selector: jsSiemaHb,
+        onInit: function () {
+            this.addDots();
+            this.updateDots();
+        },
 
-const jsSiemaHb = document.querySelector(".jsProject");
-const siemaHb = new SiemaWithDots({
-    selector: jsSiemaHb,
-    onInit: function(){
-        this.addDots();
-        this.updateDots();
-    },
-
-    onChange: function(){
-        this.updateDots();
-    },
-});
+        onChange: function () {
+            this.updateDots();
+        },
+    });
+}

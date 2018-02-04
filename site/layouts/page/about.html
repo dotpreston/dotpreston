@@ -1,0 +1,40 @@
+{{ partial "header" . }}
+<div class="container about">
+    <div class="clearfix py3">
+        <div class="col-9 mx-auto">
+            <section class="title center my4">
+                <p class="o-title">Preston based freelance web developer working with SME's</p>
+                <p>Passionate web developer with over 10 years experience.</p>
+                <hr>
+            </section>
+            <div class="center mb4">
+                <img src="https://dotpreston.co.uk/thumbs/about/windle-150x150.jpg" class="circle" alt="AndY Windle">
+            </div>
+
+            {{ .Content }}
+
+            <div class="center experience">
+                <h3 class="mb4">Experience</h3>
+                <ul class="list-reset">
+                    <li class="mb3">
+                        <span class="mb2 block">
+                            <strong>Head of Technology</strong> at MotionLab
+                        </span>
+                        <span class="o-date block">May 2015 - September 2017</span>
+                    </li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="center">
+                <h3 class="mb4">Skills</h3>
+                <ul class="list-reset">
+                    <li class="o-li--seperator inline-block px2 mb1">WordPress</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}

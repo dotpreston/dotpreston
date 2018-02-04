@@ -1,0 +1,26 @@
+{{ partial "header" . }}
+<div class="container">
+    <div class="clearfix py4">
+        <div class="col-9 mx-auto">
+            {{ range .Data.Pages }}
+            <section class="statement-block clearfix center">
+                <div class="container">
+                    <div class="clearfix py3">
+                        <div class="sm-col sm-col-12">
+                            <p class="o-date t3">{{ dateFormat "Jan 2, 2006" .PublishDate }}</p>
+                            <h2>
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h2>
+                            <p class="my3">{{ .Description }} ...</p>
+                            <p class="mt2 mb0">
+                                <a href="{{ .Permalink }}">Read more...</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}

@@ -1,0 +1,20 @@
+{{ partial "header" . }}
+<div class="container">
+    <div class="clearfix pt3">
+        <div class="col-9 mx-auto">
+            <section class="title center my4">
+                <p class="o-title">{{ .Title }}</p>
+                {{ .Content }}
+                <hr>
+            </section>
+        </div>
+    </div>
+</div>
+<section class="my-work mb4">
+    {{ range .Data.Pages }}
+
+    {{ partial "showcase" . }}
+
+    {{ end }}
+</section>
+{{ partial "footer" . }}
