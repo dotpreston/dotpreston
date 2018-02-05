@@ -5,12 +5,24 @@ media_folder: "site/static/image" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - label: "Pages"
-    name: "pages"
+  - name: "pages"
+    label: "Pages"
     files:
       - label: "Home Page"
         name: "home"
         file: "site/content/_index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+      - label: "About Page"
+        name: "about"
+        file: "site/content/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+      - label: "Contact Page"
+        name: "contact"
+        file: "site/content/contact.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
