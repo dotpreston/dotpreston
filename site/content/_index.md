@@ -1,5 +1,5 @@
 ---
-title: half oyster
+title: Impactful Web&nbsp;Design <&amp; Innovative Development
 intro: >-
   Hi, I'm Andy, a freelance web developer in Preston, Lancashire. I've worked in
   the industry since 2003 including several years in a senior role at a
@@ -13,8 +13,5 @@ intro: >-
   \
 
   **Want to know more?**
-images:
-  - name: test
-    url: /img/base-website1.jpg
 ---
 
