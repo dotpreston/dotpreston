@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Lathams of Broughton
 date: 2018-02-01T00:00:00+00:00
 strapline: ''
 intro: '[lathams.com](https://lathams.com)'
