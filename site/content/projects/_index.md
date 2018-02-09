@@ -13,5 +13,11 @@ text: >-
 images:
   - name: Lathams home page
     url: /img/lathams-website1.jpg
+  - name: Lathams featured products
+    url: /img/lathams-website2.jpg
+  - name: Lathams Product Category
+    url: /img/lathams-website3.jpg
+  - name: Lathams Lunches
+    url: /img/lathams-website4.jpg
 ---
 
