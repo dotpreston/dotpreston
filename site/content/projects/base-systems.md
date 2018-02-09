@@ -1,14 +1,13 @@
 ---
-date: 2017-05-17T17:03:58.000Z
 title: Base Systems
 description: New website build as part of the Base Systems move to new larger premises.
-project_url: http://www.basesystems.com
+date: 2017-05-17T17:03:58.000Z
 images:
-    - url: /img/base-home.jpg
-      name: b
-    - url: /img/base-category.jpg
-      name: b
-    - url: /img/base-product.jpg
-      name: b
+  - name: Base Systems home page
+    url: /img/base-home.jpg
+  - name: Base Systems category page
+    url: /img/base-category.jpg
+  - name: Base Systems product page
+    url: /img/base-product.jpg
 ---
-Design, brand and development of a new website ready for Base Systems new premises open day. The site has been built with eCommerce in mind to allow possible movement to a transactional site in the future.
+
