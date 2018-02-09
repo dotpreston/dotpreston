@@ -2,7 +2,7 @@
 title: Lathams of Broughton
 date: 2018-02-01T00:00:00+00:00
 strapline: ''
-intro: '<https://lathams.com text: lathams.com>'
+intro: '[lathams.com](https://lathams.com)'
 summary: >-
   New website build for prominent local family business selling quality
   indulgent desserts, cakes and biscuits
