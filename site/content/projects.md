@@ -22,5 +22,10 @@ images:
     url: /img/lathams-website3.jpg
   - name: Lathams Lunches
     url: /img/lathams-website4.jpg
+resources:
+- src: "images/lathams-website1.jpg"
+  name: "header"
+- src: "images/lathams-website2.jpg"
+  title: "Photo Specifications"
 ---
 

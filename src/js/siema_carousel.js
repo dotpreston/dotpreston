@@ -31,18 +31,20 @@ if (document.querySelector(".jsProject") !== null) {
 
     var bLazy = new Blazy({});
 
-    const jsSiemaHb = document.querySelector(".jsProject");
-    const siemaHb = new SiemaWithDots({
-        selector: jsSiemaHb,
-        onInit: function () {
-            this.addDots();
-            this.updateDots();
-        },
+    const siemas = document.querySelectorAll(".jsProject");
+    for(const siema of siemas) {
+        const siemaHb = new SiemaWithDots({
+            selector: siema,
+            onInit: function() {
+                this.addDots();
+                this.updateDots();
+            },
 
-        onChange: function () {
-            var siema_images = document.getElementsByClassName("jsSiemaImage");
-            this.updateDots();
-            bLazy.load(siema_images, true);
-        },
-    });
+            onChange: function() {
+                var siema_images = document.getElementsByClassName("jsSiemaImage");
+                this.updateDots();
+                bLazy.load(siema_images, true);
+            },
+        });
+    }
 }

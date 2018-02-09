@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
 
-media_folder: "site/static/image" # Folder where user uploaded files should go
+media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
@@ -59,3 +59,9 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Name, name: name, widget: string}
           - {label: Url, name: url, widget: image}
+      - label: Resources
+        name: resources
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Src, name: src, widget: image}
