@@ -26,6 +26,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
+      - label: "Projects Page"
+        name: "projects_index"
+        file: "site/content/projects/_index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
   - name: "blog"
     label: "Blog"
     folder: "site/content/blog"
