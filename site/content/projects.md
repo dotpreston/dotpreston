@@ -1,6 +1,9 @@
 ---
 title: Projects
 date: 2018-02-01T00:00:00+00:00
+url: "/projects"
+type: "projects"
+layout: "list"
 strapline: ''
 intro: '[lathams.com](https://lathams.com)'
 summary: >-
