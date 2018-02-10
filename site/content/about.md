@@ -1,11 +1,23 @@
 ---
-title: "About"
-date: 2018-01-24T22:32:50Z
-url: "/about"
-type: "page"
-layout: "about"
+title: About
 strapline: Preston based freelance web developer working with SME's
 intro: Passionate web developer with over 10 years experience.
+experience:
+  - what: Head of Technology
+    when: May 2015 - September 2017
+    where: MotionLab
+  - what: Senior Developer
+    when: September 2010 - May 2015
+    where: MotionLab
+  - what: Software Developer
+    when: August 2007 - September 2010
+    where: AMA Dataset
+  - what: IT Support and Web Developer
+    when: February 2003 - August 2007
+    where: Roadferry Ltd
+  - what: 'Business Information Systems Bsc 2:1'
+    when: September 1997 - May 2002
+    where: Liverpool John Moores University
 skills: |-
   WordPress
   WooCommerce
@@ -18,10 +30,6 @@ skills: |-
   Front End Development
   Back End Development
   Mario Kart SNES
-experience:
-  - what: Base Systems home page
-    when: /img/base-home.jpg
-    were: /img/base-home.jpg 
 ---
 A programmer at heart since discovering Sinclair Basic on my ZX Spectrum back in the 80s. Although I never dreamt that this could lead to a career in web development.
 
