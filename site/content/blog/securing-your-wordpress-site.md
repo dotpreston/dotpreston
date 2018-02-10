@@ -2,7 +2,7 @@
 title: Securing your wordpress site
 date: 2018-01-22T18:03:58+00:00
 cover_image: /img/wordpress-security-preston.png
-excerpt: ']]'
+excerpt: 'this is an excerpt'
 ---
 At the point of writing, Wordpress is powering nearly 30% of all websites and has a market share of almost 60% over all other content management systems.  With popularity comes a major issue, you make yourself a target.  If there is a vulnerability than the likelihood is it is going to be found and there are people out there just waiting to take advantage of these vulnerabilities.
 

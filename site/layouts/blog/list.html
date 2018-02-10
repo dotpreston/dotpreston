@@ -11,7 +11,11 @@
                             <h2>
                                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                             </h2>
-                            <p class="my3">{{ .Description }} ...</p>
+                            {{ if (isset  .Params "excerpt") }}
+                                <p class="my3">{{ .Params.excerpt }}</p>
+                            {{ else }}
+                                <p class="my3">{{ .Summary | truncate 300 }}</p>
+                            {{ end }}
                             <p class="mt2 mb0">
                                 <a href="{{ .Permalink }}">Read more...</a>
                             </p>
