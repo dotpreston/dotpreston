@@ -1,7 +1,8 @@
 ---
 title: DOT Foundation Websites for start-ups and charities
-date: 2017-11-12T10:58:37+00:00
+date: 2017-11-12T10:58:37.000Z
 cover_image: /img/foundationwebsites.png
+excerpt: yy
 ---
 Not having a web presence for your organisation is a bit like not having a contact phone number or email address. In today's digital world if someone wants to find information about you they pick up their phone, tablet, and to a lesser extent these days a desktop computer (although a little heavy), and look for you online.  
 
