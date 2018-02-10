@@ -1,12 +1,15 @@
 ---
 title: Brindle Distillery
-date: 2017-06-03T08:32:20+01:00
+date: 2017-06-03T07:32:20.000Z
 strapline: eCommerce website for launch of new locally produced Gin
-intro: >-
-  (link: http://www.brindledistillery.co.uk/ text: www.brindledistillery.co.uk
-  target: _blank rel: nofollow)
+intro: '[www.brindledistillery.co.uk](http://www.brindledistillery.co.uk)'
 summary: eCommerce website for a new locally produced Gin
-text: |-
+text: >-
+  Working with talented designer [Graham Walker](http://designbygray.co.uk) a
+  custom theme WordPress website was built for the launch of a new gin from
+  Brindle Distillery called Cuckoo.  With the use of the superb WooCommerce
+  plugin, Cuckoo gin products can be purchased with ease and simplicity.
+skills: |-
   Wordpress
   WooCommerce
   Stripe Payment Gateway
