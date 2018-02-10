@@ -52,7 +52,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro", name: "intro", widget: "markdown", "required" : false}
       - {label: "Summary", name: "summary", widget: "markdown", "required" : false}
       - {label: "Text", name: "text", widget: "markdown", "required" : false}
-      - {label: "Skills", name: "text", widget: "text", "required" : false}
+      - {label: "Skills", name: "skills", widget: "text", "required" : false}
       - label: Images
         name: images
         widget: list
