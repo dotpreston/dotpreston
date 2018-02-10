@@ -1,6 +1,6 @@
 ---
 title: Brindle Distillery
-date: 2018-02-10T08:32:20.225Z
+date: 2017-06-03T08:32:20+01:00
 strapline: eCommerce website for launch of new locally produced Gin
 intro: >-
   (link: http://www.brindledistillery.co.uk/ text: www.brindledistillery.co.uk
@@ -12,6 +12,7 @@ text: |-
   Stripe Payment Gateway
   Front End Development
 images:
-  - url: /img/brindle-home.jpg
+  - name: Brindle Home
+    url: /img/brindle-home.jpg
 ---
 
