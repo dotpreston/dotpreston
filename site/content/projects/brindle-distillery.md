@@ -13,7 +13,5 @@ text: |-
   Front End Development
 images:
   - url: /img/brindle-home.jpg
-resources:
-  - src: /img/brindle-home.jpg
 ---
 
