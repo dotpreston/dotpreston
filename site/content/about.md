@@ -1,7 +1,5 @@
 ---
 title: About
-type: "page"
-layout: "about"
 strapline: Preston based freelance web developer working with SME's
 intro: Passionate web developer with over 10 years experience.
 experience:
