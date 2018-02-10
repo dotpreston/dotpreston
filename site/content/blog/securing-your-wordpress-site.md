@@ -12,22 +12,22 @@ Once a site is compromised one of the most common types of actions taken by the 
 
 ## Brute force attacks
 
-Even if your site is kept up to date, brute force attacks at attempts to login can be successful if your users are not taking their password security seriously.  Your site users can be one of your easiest points of entry, especially if they are not using strong passwords or are sharing passwords across multiple services.  In December, it came to light that a (link: https://medium.com/4iqdelvedeep/1-4-billion-clear-text-credentials-discovered-in-a-single-database-3131d0a1ae14 text: huge 1.4 Billion database of encrypted passwords was available on the dark web target: _blank rel:nofollow) to would be hackers.  It's important to not only educate users but to have measures in place to try and identify and block possible brute force attacks.
+Even if your site is kept up to date, brute force attacks at attempts to login can be successful if your users are not taking their password security seriously.  Your site users can be one of your easiest points of entry, especially if they are not using strong passwords or are sharing passwords across multiple services.  In December, it came to light that a [huge 1.4 Billion database of encrypted passwords was available on the dark web](https://medium.com/4iqdelvedeep/1-4-billion-clear-text-credentials-discovered-in-a-single-database-3131d0a1ae14) to would be hackers.  It's important to not only educate users but to have measures in place to try and identify and block possible brute force attacks.
 
 ## Keep your website safe
 
 There are some simple steps you can take to improve the security of your site.
 
-- Update WordPress and plugins frequently 
-- Avoid plugins that no longer look to be maintained
-- Use strong passwords
-- Do not re-use passwords across multiple services
-- Do not share password or user accounts with others
-- Use a firewall to block against brute force attacks
-- Periodically check over your user accounts and remove those that are not used or look suspicious
+* Update WordPress and plugins frequently 
+* Avoid plugins that no longer look to be maintained
+* Use strong passwords
+* Do not re-use passwords across multiple services
+* Do not share password or user accounts with others
+* Use a firewall to block against brute force attacks
+* Periodically check over your user accounts and remove those that are not used or look suspicious
 
 At DOT we take web site security seriously not just during the build but as an ongoing process once a site is launched.  We ensure site's are continuously updated, users are educated and look to put measures in place to block against threats.  Should the worst still happen then we'd look to get you back up and running with a recent backup stored off the server.
 
----
+- - -
 
 Is your web site security keeping you awake at night?  Then get in touch to see what services DOT can offer.
