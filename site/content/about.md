@@ -4,6 +4,7 @@ layout: about
 title: About
 strapline: Preston based freelance web developer working with SME's
 intro: Passionate web developer with over 10 years experience.
+image: 
 experience:
   - what: Head of Technology
     when: May 2015 - September 2017

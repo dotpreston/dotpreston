@@ -23,6 +23,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Strapline, name: strapline, widget: string}
           - {label: Intro, name: intro, widget: text}
+          - {label: Image, name: image, widget: image}
           - {label: "Text", name: "body", widget: "markdown"}
           - label: Experience
             name: experience
