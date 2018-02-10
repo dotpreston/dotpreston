@@ -1,0 +1,24 @@
+{{ partial "header" . }}
+<div class="container">
+    <div class="clearfix py3 center">
+        <div class="col-9 mx-auto">
+            <section class="title center my4">
+                <p class="o-title">{{ .Params.strapline }}</p>
+                <p>Tel: <a href="tel:+{{ replace $.Site.Params.tel " " "" }}">{{ $.Site.Params.tel }}</a><br> Email: <a href="mailto:{{ $.Site.Params.email }}">{{ $.Site.Params.email }}</a></p>
+                <hr>
+            </section>
+
+            {{ .Content }}
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="clearfix pb4">
+        <div class="col-9 mx-auto">
+            {{ partial "contact_form" . }}
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}
