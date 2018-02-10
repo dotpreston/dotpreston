@@ -1,5 +1,9 @@
 ---
 title: About
+date: 2018-01-24T22:32:50Z
+url: "/about"
+type: "page"
+layout: "about"
 strapline: Preston based freelance web developer working with SME's
 intro: Passionate web developer with over 10 years experience.
 experience:
