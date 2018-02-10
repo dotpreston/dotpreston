@@ -1,6 +1,6 @@
 ---
 title: Lathams of Broughton
-date: 2018-02-01T00:00:00+00:00
+date: 2018-02-02T00:00:00+00:00
 strapline: ''
 intro: '[lathams.com](https://lathams.com)'
 summary: >-
@@ -20,9 +20,8 @@ images:
   - name: Lathams Lunches
     url: /img/lathams-website4.jpg
 resources:
-  - src: "images/lathams-website1.jpg"
-    name: "header"
-  - src: "images/lathams-website2.jpg"
-    title: "Photo Specificat"
+  - name: header
+    src: images/lathams-website1.jpg
+  - src: images/lathams-website2.jpg
 ---
 
