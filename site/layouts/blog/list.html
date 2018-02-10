@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="clearfix py3">
                         <div class="sm-col sm-col-12">
-                            <p class="o-date t3">{{ dateFormat "Jan 2, 2006" .PublishDate }}</p>
+                            <p class="o-date t3">{{ .Date.Format "January 2, 2006" }}</p>
                             <h2>
                                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                             </h2>
