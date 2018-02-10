@@ -2,7 +2,11 @@
 <div class="container">
     <div class="clearfix py4">
         <div class="col-9 mx-auto">
-            {{ range .Data.Pages }}
+
+            {{ $list := (.Data.Pages) }}
+            {{ $len := (len $list) }}
+
+            {{ range $index, $element := $list }}
             <section class="statement-block clearfix center">
                 <div class="container">
                     <div class="clearfix py3">
@@ -11,10 +15,10 @@
                             <h2>
                                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                             </h2>
-                            {{ if (isset  .Params "excerpt") }}
-                                <p class="my3">{{ .Params.excerpt }}</p>
+                            {{ if and (isset .Params "excerpt") (ne .Params.excerpt "") }}
+                            <p class="my3 excerpt">{{ .Params.excerpt }}</p>
                             {{ else }}
-                                <p class="my3">{{ .Summary | truncate 300 }}</p>
+                            <p class="my3 summary">{{ .Summary | truncate 300 }}</p>
                             {{ end }}
                             <p class="mt2 mb0">
                                 <a href="{{ .Permalink }}">Read more...</a>
@@ -23,6 +27,11 @@
                     </div>
                 </div>
             </section>
+
+            {{ if ne (add $index 1) $len }}
+            <hr>
+            {{ end }}
+
             {{ end }}
         </div>
     </div>

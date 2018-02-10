@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-gb"
 languageLang = "en"
-title = "My new Victor-Hugo site"
+title = "DOT"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
@@ -9,6 +9,7 @@ title = "My new Victor-Hugo site"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
+    domain = "https://dotpreston.co.uk"
     tel = "07917 797788"
     email = "andy@dotpreston.co.uk"
     address = [

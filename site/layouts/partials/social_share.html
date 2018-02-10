@@ -1,0 +1,10 @@
+<div class="center m4">
+    <h3 class="mb3">Find this interesting? Then share with people you know.</h3>
+    {{ $twitter := delimit (slice .Title " " .Site.Params.domain .Permalink " @DotPrestonLancs #dotpreston") "" }}
+    <a href="https://twitter.com/intent/tweet?source=webclient&amp;text={{ $twitter }}" target="blank" title="Tweet this" class="m1">
+        <img src="/img/dot_tw.svg" class="u-grow">
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u={{ .Site.Params.domain }}{{ .Permalink }}" target="blank" title="Share on Facebook" class="m1">
+        <img src="/img/dot_fb.svg" class="u-grow">
+    </a>
+</div>

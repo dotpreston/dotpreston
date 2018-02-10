@@ -19,7 +19,17 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/content/about.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: Strapline, name: strapline, widget: string}
+          - {label: Intro, name: intro, widget: text}
+          - {label: "Text", name: "body", widget: "markdown"}
+          - label: Experience
+            name: experience
+            widget: list
+            fields:
+              - {label: What, name: what, widget: string}
+              - {label: Where, name: where, widget: string}
+              - {label: When, name: when, widget: string}
+          - {label: "Skills", name: "skills", widget: "text", "required" : false}
       - label: "Contact Page"
         name: "contact"
         file: "site/content/contact.md"
@@ -40,7 +50,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Cover Image", name: cover_image, widget: image}
-      - {label: "Blog post content", name: "body", widget: "markdown"}
+      - {label: "Content", name: "body", widget: "markdown"}
       - {label: "Excerpt", name: excerpt, widget: text, "required" : false}
   - name: "projects"
     label: "Projects"
