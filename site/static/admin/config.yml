@@ -18,6 +18,8 @@ collections: # A list of collections the CMS should be able to edit
         name: "about"
         file: "site/content/about.md"
         fields:
+          - {label: "Type", name: "type", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden"}
           - {label: Title, name: title, widget: string}
           - {label: Strapline, name: strapline, widget: string}
           - {label: Intro, name: intro, widget: text}
@@ -48,8 +50,6 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Type", name: "type", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Cover Image", name: cover_image, widget: image}
       - {label: "Content", name: "body", widget: "markdown"}
