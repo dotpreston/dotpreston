@@ -19,9 +19,5 @@ images:
     url: /img/lathams-website3.jpg
   - name: Lathams Lunches
     url: /img/lathams-website4.jpg
-resources:
-  - name: header
-    src: images/lathams-website1.jpg
-  - src: images/lathams-website2.jpg
 ---
 
