@@ -1,0 +1,8 @@
+<div class="center">
+    <h3 class="mb4">Skills</h3>
+    <ul class="list-reset">
+        {{ range split .Params.skills "\n" }}
+        <li class="o-li--seperator inline-block px2 mb1">{{ . }}</li>
+        {{ end }}
+    </ul>
+</div>
