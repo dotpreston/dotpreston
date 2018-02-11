@@ -15,12 +15,12 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
       - label: "Projects Page"
-        name: "home"
+        name: "projects_page"
         file: "site/content/projects/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
       - label: "Blog Page"
-        name: "home"
+        name: "blog_page"
         file: "site/content/blog/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
