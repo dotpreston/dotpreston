@@ -19,6 +19,8 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/content/projects/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Strapline, name: strapline, widget: string}
+          - {label: "Text", name: "body", widget: "markdown"}
       - label: "Blog Page"
         name: "blog_page"
         file: "site/content/blog/_index.md"

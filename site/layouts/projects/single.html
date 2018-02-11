@@ -5,7 +5,9 @@
         <div class="col-9 mx-auto">
             <section class="title center my4">
                 <h1 class="o-title">{{ .Title }}</h1>
-                <p>{{ .Params.intro }}</p>
+                {{ with .Params.intro }}
+                <p>{{ . | markdownify }}</p>
+                {{ end }}
                 <hr>
             </section>
 
