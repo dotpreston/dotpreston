@@ -1,4 +1,5 @@
 ---
+collection: single
 title: DOT Foundation Websites for start-ups and charities
 date: 2017-11-12T10:58:37.000Z
 cover_image: /img/foundationwebsites.png

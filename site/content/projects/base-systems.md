@@ -1,4 +1,5 @@
 ---
+collection: single
 title: Base Systems
 description: New website build as part of the Base Systems move to new larger premises.
 date: 2017-05-17T17:03:58.000Z

@@ -1,4 +1,5 @@
 ---
+collection: single
 title: United Makeup Artists Expo
 date: 2017-01-01T08:51:05+00:00
 strapline: ''

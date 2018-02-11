@@ -1,4 +1,5 @@
 ---
+collection: single
 title: 'Kirby CMS or: How I Learned to Stop Worrying and Love Building a Website'
 date: 2017-10-28T11:00:52+01:00
 cover_image: /img/kirby-screenshot.png

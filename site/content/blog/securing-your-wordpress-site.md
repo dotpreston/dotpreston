@@ -1,4 +1,5 @@
 ---
+collection: single
 title: Securing your wordpress site
 date: 2018-01-22T18:03:58.000Z
 cover_image: /img/wordpress-security-preston.png

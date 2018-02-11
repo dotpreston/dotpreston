@@ -45,6 +45,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "blog"
     label: "Blog"
     folder: "site/content/blog"
+    filter: {field: "collection", value: "single"}
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}

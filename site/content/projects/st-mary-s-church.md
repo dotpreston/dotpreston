@@ -1,4 +1,5 @@
 ---
+collection: single
 title: St Mary's Church
 date: 2017-05-01T08:48:27+01:00
 intro: 'Project is currently in progress, please come back later for more details'
