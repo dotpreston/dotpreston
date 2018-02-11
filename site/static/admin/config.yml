@@ -34,6 +34,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
+          - {label: SEO Description 1, name: description1, widget: text}
         meta:
           - {label: "SEO Description", name: "description", widget: "text"}
       - label: "Projects Page"
