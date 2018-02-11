@@ -1,12 +1,17 @@
 ---
-title: Lathams of Broughton
 collection: single
-date: 2018-02-02T00:00:00+00:00
+title: Lathams of Broughton
+date: 2018-02-02T00:00:00.000Z
 strapline: ''
 intro: '[lathams.com](https://lathams.com)'
 summary: >-
   New website build for prominent local family business selling quality
   indulgent desserts, cakes and biscuits
+skills: |-
+  Wordpress
+  WooCommerce
+  Front End Development
+  Design and Branding
 images:
   - name: Lathams home page
     url: /img/lathams-website1.jpg
