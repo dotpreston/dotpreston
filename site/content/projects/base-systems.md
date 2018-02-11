@@ -1,8 +1,7 @@
 ---
 collection: single
 title: Base Systems
-description: New website build as part of the Base Systems move to new larger premises.
-date: 2017-05-17T17:03:58.000Z
+date: 2017-09-12T18:03:58+01:00
 images:
   - name: Base Systems home page
     url: /img/base-home.jpg
