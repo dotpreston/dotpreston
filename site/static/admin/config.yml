@@ -17,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
         description: "General Site Settings"
         fields:
           - {label: "Global title", name: "site_title", widget: "string"}
-          - {label: "Global Meta Description", name: "global_meta_description", widget: "textarea"}
+          - {label: "Global Meta Description", name: "global_meta_description", widget: "text"}
           - {label: "Global Meta Keywords", name: "global_meta_keywords", widget: "string"}
           - label: "Social Links"
             name: social_links
