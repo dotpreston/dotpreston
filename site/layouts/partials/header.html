@@ -7,7 +7,7 @@
   <base href="{{ $.Site.BaseURL }}">
 
   <title>{{ .Site.Title }}</title>
-  <meta name="description" content="{{ .Site.Title }}">
+  <meta name="description" content="{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ .Site.Params.description }}{{ end }}>">
   <meta name="keywords" content="{{ .Site.Title }}">
 
   <link rel="shortcut icon" href="img/dot-favicon.png" />
@@ -19,6 +19,28 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
   <meta name="google-site-verification" content="HH_8RH6fr-znVJsXHb6YI-hczZKMKFFIY2uZj75OkcE" />
+
+  {{ if eq .Section "blog"  }}
+  {{ if eq .Params.collection "single"  }}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@DotPrestonLancs" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ if and (isset .Params "excerpt") (ne .Params.excerpt "") }}{{ .Params.excerpt }}{{ else }}{{ .Summary | truncate 300 }}{{ end }}" />
+  {{ if isset .Params "cover_image" }}
+  <meta name="twitter:image" content="{{ .Site.Params.domain }}{{ .Params.cover_image }}" />
+  {{ end }}
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ .Site.Params.domain }}{{ .Permalink }}" />
+  {{ if isset .Params "cover_image" }}
+  <meta property="og:image" content="{{ .Site.Params.domain }}{{ .Params.cover_image }}" />
+  {{ end }}
+  <meta property="og:description" content="{{ if and (isset .Params "excerpt") (ne .Params.excerpt "") }}{{ .Params.excerpt }}{{ else }}{{ .Summary | truncate 300 }}{{ end }}" />
+  <meta property="og:site_name" content="DOT Preston" />
+  {{ end }}
+  {{ end }}
 
   <!--[if lt IE 9]>
   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>

@@ -9,6 +9,7 @@ title = "DOT"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
+    description = "Hello world"
     domain = "https://dotpreston.co.uk"
     tel = "07917 797788"
     email = "andy@dotpreston.co.uk"

@@ -10,9 +10,11 @@
 
             <p class="o-date t3 mb4 center">{{ .Date.Format "January 2, 2006" }}</p>
 
+            {{ if isset .Params "cover_image" }}
             <figure class="mx0 my2">
                 <img src="{{ .Params.cover_image }}" alt="{{ .Title }}" class="fit">
             </figure>
+            {{ end }}
 
             {{ .Content }}
 
