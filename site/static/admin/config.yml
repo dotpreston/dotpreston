@@ -17,13 +17,14 @@ collections: # A list of collections the CMS should be able to edit
         description: "General Site Settings"
         fields:
           - {label: "Global title", name: "site_title", widget: "string"}
-          - label: "Post Settings"
-            name: posts_settings
+          - {label: "Global Meta Description", name: "global_meta_description", widget: "textarea"}
+          - {label: "Global Meta Keywords", name: "global_meta_keywords", widget: "string"}
+          - label: "Social Links"
+            name: social_links
             widget: "object"
             fields:
-              - {label: "Number of posts on frontpage", name: front_limit, widget: number}
-              - {label: "Default Author", name: author, widget: string}
-              - {label: "Default Thumbnail", name: thumb, widget: image, class: "thumb"}
+              - {label: "Facebook", name: facebook, widget: string}
+              - {label: "Twitter", name: twitter, widget: string}
   - name: "pages"
     label: "Pages"
     files:
