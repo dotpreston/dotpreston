@@ -1,5 +1,6 @@
 ---
 title: Lathams of Broughton
+collection: single
 date: 2018-02-02T00:00:00+00:00
 strapline: ''
 intro: '[lathams.com](https://lathams.com)'

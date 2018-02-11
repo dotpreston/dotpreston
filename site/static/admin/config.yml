@@ -67,9 +67,10 @@ collections: # A list of collections the CMS should be able to edit
   - name: "projects"
     label: "Projects"
     folder: "site/content/projects"
-    filter: {field: "collection_index", value: ""}
+    filter: {field: "collection", value: "single"}
     create: true
     fields:
+      - {label: "Collection", name: "collection", widget: "hidden", default: "single"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Strapline", name: "strapline", widget: "string", "required" : false}
