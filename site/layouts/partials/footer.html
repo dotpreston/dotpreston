@@ -24,15 +24,23 @@
 
       </div>
       <div class="sm-col sm-col-8 px2 pl3 xs-hide">
-        <!-- TODO: Latest blog -->
         <h3 class="t3 mt0 mb1">Latest Blog</h3>
+        {{ range where .Pages "Section" "blog" | first 1 }}
 
-        <h4 class="pb1"></h4>
+        <h4 class="pb1">{{ .Title }}</h4>
 
-        <p class="m0 pb1"></p>
+        {{ if and (isset .Params "excerpt") (ne .Params.excerpt "") }}
+        <p class="m0 pb1 excerpt">
+          {{ .Params.excerpt }}
+        </p>
+        {{ else }}
+        <p class="m0 pb1 excerpt">
+          {{ .Summary | truncate 300 }}
+        </p>
+        {{ end }}
 
-        <a href="" class="btn--tertiary mt2">Read more</a>
-
+        <a href="{{ .Permalink }}" class="btn--tertiary mt2">Read more</a>
+        {{ end }}
       </div>
     </div>
   </div>

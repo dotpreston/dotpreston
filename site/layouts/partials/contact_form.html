@@ -1,9 +1,9 @@
 <form id="dot-sign-up" method="post" name="contact" netlify-honeypot="bot-field" action="/thank-you" netlify>
     <div class="o-alert--danger error" style="display: none"></div>
-    <input name="bot-field"></label>
-    <input name="name" placeholder="NAME" id="dot-signup-name" class="block p1 my3" value="">
-    <input name="email" placeholder="EMAIL ADDRESS" id="dot-signup-email" class="block p1 my3" value="">
-    <textarea name="message" placeholder="MESSAGE" class="block p1 my3" id="contact-message" rows="1"></textarea>
+    <input name="bot-field" type="hidden"></label>
+    <input name="name" placeholder="NAME" id="dot-signup-name" class="block p1 my3" value="" required>
+    <input name="email" placeholder="EMAIL ADDRESS" id="dot-signup-email" class="block p1 my3" value="" required>
+    <textarea name="message" placeholder="MESSAGE" class="block p1 my3" id="contact-message" rows="1" required></textarea>
     <div class="o-input--centerer">
         <input name="opt-in" type="checkbox" id="opt-in">
         <label for="opt-in">If you wish to sign up to our mailing list please tick the box</label>

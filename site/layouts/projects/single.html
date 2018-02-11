@@ -1,18 +1,19 @@
 {{ partial "header" . }}
 
-<div class="clearfix pt3">
-    <div class="col-9 mx-auto">
-        <section class="title center my4">
-            <h1 class="o-title">{{ .Title }}</h1>
-            {{ $url := urls.Parse .Params.project_url }}
-            <p><a href="{{ .Params.project_url }}" rel="nofollow" target="_blank">{{ $url.Host }}</a></p>
-            <hr>
-        </section>
+<div class="container">
+    <div class="clearfix pt3">
+        <div class="col-9 mx-auto">
+            <section class="title center my4">
+                <h1 class="o-title">{{ .Title }}</h1>
+                <p>{{ .Params.intro }}</p>
+                <hr>
+            </section>
 
-        {{ .Content }}
+            {{ .Content }}
 
-        <hr/>
+            <hr/>
 
+        </div>
     </div>
 </div>
 
@@ -23,7 +24,7 @@
                 <ul class="c-showcase__gallery jsProject list-reset mb0">
                     {{ range .Params.images }}
                     <li class="px1">
-                        <img src="/img/base-product.jpg" class="fit o-img--rounded" alt="{{ .name }}">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ .url }}" class="jsSiemaImage b-lazy fit o-img--rounded" alt="{{ .name }}" />
                     </li>
                     {{ end }}
                 </ul>
@@ -31,5 +32,13 @@
         </div>
     </div>
 </section>
+
+<hr/>
+
+{{ partial "skills" . }}
+
+<hr/>
+
+{{ partial "social_share" . }}
 
 {{ partial "footer" . }}
