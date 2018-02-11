@@ -25,7 +25,7 @@
       </div>
       <div class="sm-col sm-col-8 px2 pl3 xs-hide">
         <h3 class="t3 mt0 mb1">Latest Blog</h3>
-        {{ range where .Pages "Section" "blog" | first 1 }}
+        {{ range where (where .Page.Site.Pages.ByDate "Section" "blog") ".Params.collection" "==" "single" | last 1 }}
 
         <h4 class="pb1">{{ .Title }}</h4>
 

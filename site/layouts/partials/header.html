@@ -7,8 +7,8 @@
   <base href="{{ $.Site.BaseURL }}">
 
   <title>{{ .Site.Title }}</title>
-  <meta name="description" content="{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ .Site.Params.description }}{{ end }}>">
-  <meta name="keywords" content="{{ .Site.Title }}">
+  <meta name="description" content="{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ index .Site.Data.settings "global_meta_description" }}{{ end }}">
+  <meta name="keywords" content="{{ if isset .Params "meta_keywords" }}{{ .Params.meta_keywords }}{{ else }}{{ index .Site.Data.settings "global_meta_keywords" }}{{ end }}">
 
   <link rel="shortcut icon" href="img/dot-favicon.png" />
   <link rel="apple-touch-icon" sizes="57x57" href="img/dot-appletouch.png" />
@@ -71,10 +71,12 @@
   <ul class="c-nav__links t2 list-reset">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <li class="c-nav__link{{ if $currentPage.IsMenuCurrent "main" . }} is-active{{ end }}"><a href="{{.URL}}"> {{ .Name }} </a></li>
+    <li class="c-nav__link{{ if $currentPage.IsMenuCurrent "main" . }} is-active{{ end }}">
+      <a href="{{.URL}}"> {{ .Name }} </a>
+    </li>
     {{end}}
     <li>
-      <ul class="social list-reset m0 pt2"> <li class="inline-block pr1"><a href="https://www.instagram.com/dot_preston/" target="_blank" rel="nofollow"><img src="https://dotpreston.co.uk/assets/images/dot_insta_wo.svg" class="u-grow"></a></li> <li class="inline-block pr1"><a href="https://twitter.com/DotPrestonLancs" target="_blank" rel="nofollow"><img src="https://dotpreston.co.uk/assets/images/dot_tw_wo.svg" class="u-grow"></a></li> <li class="inline-block pr1"><a href="https://www.facebook.com/DOTPrestonCreative/" target="_blank" rel="nofollow"><img src="https://dotpreston.co.uk/assets/images/dot_fb_wo.svg" class="u-grow"></a></li> <li class="inline-block pr1"><a href="https://www.linkedin.com/company/dot-preston/" target="_blank" rel="nofollow"><img src="https://dotpreston.co.uk/assets/images/dot_li_wo.svg" class="u-grow"></a></li> <li class="inline-block"><a href="/contact"><img src="https://dotpreston.co.uk/assets/images/dot_email_wo.svg" class="u-grow"></a></li> </ul>
+      {{ partial "social" . }}
     </li>
   </ul>
 </nav>
