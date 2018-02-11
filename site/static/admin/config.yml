@@ -14,12 +14,6 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-      - label: "Project Landing"
-        name: "project_landing"
-        file: "site/projects/_index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Collection Index", name: "collection_index", widget: "hidden", default: "true"}
       - label: "About Page"
         name: "about"
         file: "site/content/about.md"
