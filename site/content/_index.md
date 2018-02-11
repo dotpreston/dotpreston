@@ -8,7 +8,7 @@ intro: >-
 
   It is increasingly more important to have a web presence that suitably
   reflects your organisation in tomorrows digital world. DOT works with SME's in
-  and around Lancashire to help make this achievable.....
+  and around Lancashire to help make this achievable.
 
   \
 
