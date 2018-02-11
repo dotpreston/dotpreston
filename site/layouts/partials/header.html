@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <base href="{{ $.Site.BaseURL }}">
 
-  <title>{{ .Site.Title }}</title>
+  <title>{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ index .Site.Data.settings "global_meta_description" }}{{ end }}</title>
   <meta name="description" content="{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ index .Site.Data.settings "global_meta_description" }}{{ end }}">
   <meta name="keywords" content="{{ if isset .Params "meta_keywords" }}{{ .Params.meta_keywords }}{{ else }}{{ index .Site.Data.settings "global_meta_keywords" }}{{ end }}">
 
@@ -91,8 +91,11 @@
         </div>
         <div class="col col-9">
           <div class="c-fixed-header__title">
-            <!-- TODO: non home page title -->
-            <h1 class="t3 pl3">Impactful Web&nbsp;Design <span>&amp;</span> Innovative Development</h1>
+            {{ if and (isset .Params "collection") (eq .Params.collection "single") }}
+            <h2 class="t3 pl3">{{ if eq .Section "blog"  }}Blog{{ else }}Projects{{ end }}</h2>
+            {{ else }}
+            <h1 class="t3 pl3">{{ .Title }}</h1>
+            {{ end }}
           </div>
         </div>
       </div>
