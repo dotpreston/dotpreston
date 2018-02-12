@@ -51,7 +51,6 @@ collections: # A list of collections the CMS should be able to edit
             name: seo
             widget: "object"
             fields:
-              - {label: SEO Title, name: meta_title, widget: string}
               - {label: SEO Description, name: meta_description, widget: text}
       - label: "Blog Page"
         name: "blog_page"
