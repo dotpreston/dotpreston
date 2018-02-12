@@ -11,7 +11,11 @@
   {{ else }}
   <title>{{ htmlUnescape .Title }} | DOT</title>
   {{ end }}
+  {{ if and (isset .Params "collection") (eq .Params.collection "single") (eq .Section "blog") }}
+  <meta name="description" content="{{ if and (isset .Params "excerpt") (ne .Params.excerpt "") }}{{ .Params.excerpt }}{{ else }}{{ .Summary | truncate 300 }}{{ end }}">
+  {{ else }}
   <meta name="description" content="{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ index .Site.Data.settings "global_meta_description" }}{{ end }}">
+  {{ end }}
   <meta name="keywords" content="{{ index .Site.Data.settings "global_meta_keywords" }}">
 
   <link rel="shortcut icon" href="img/dot-favicon.png" />
