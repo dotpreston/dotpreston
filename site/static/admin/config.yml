@@ -88,6 +88,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Cover Image", name: cover_image, widget: image}
       - {label: "Content", name: "body", widget: "markdown"}
       - {label: "Excerpt", name: excerpt, widget: text, "required" : false}
+    meta:
+      - {label: "SEO Description", name: "description", widget: "text"}
   - name: "projects"
     label: "Projects"
     folder: "site/content/projects"
