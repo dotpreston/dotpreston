@@ -33,22 +33,37 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/content/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: meta_description, widget: text}
           - {label: Intro, name: intro, widget: markdown}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: SEO Title, name: meta_title, widget: string}
+              - {label: SEO Description, name: meta_description, widget: text}
       - label: "Projects Page"
         name: "projects_page"
         file: "site/content/projects/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: meta_description, widget: text}
           - {label: Strapline, name: strapline, widget: string}
           - {label: "Text", name: "body", widget: "markdown"}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: SEO Title, name: meta_title, widget: string}
+              - {label: SEO Description, name: meta_description, widget: text}
       - label: "Blog Page"
         name: "blog_page"
         file: "site/content/blog/_index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: meta_description, widget: text}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: SEO Title, name: meta_title, widget: string}
+              - {label: SEO Description, name: meta_description, widget: text}
       - label: "About Page"
         name: "about"
         file: "site/content/about.md"
@@ -56,7 +71,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Type", name: "type", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden"}
           - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: meta_description, widget: text}
           - {label: Strapline, name: strapline, widget: string}
           - {label: Intro, name: intro, widget: text}
           - {label: Image, name: image, widget: image}
@@ -69,6 +83,12 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Where, name: where, widget: string}
               - {label: When, name: when, widget: string}
           - {label: "Skills", name: "skills", widget: "text", "required" : false}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: SEO Title, name: meta_title, widget: string}
+              - {label: SEO Description, name: meta_description, widget: text}
       - label: "Contact Page"
         name: "contact"
         file: "site/content/contact.md"
@@ -76,9 +96,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Type", name: "type", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden"}
           - {label: Title, name: title, widget: string}
-          - {label: SEO Description, name: meta_description, widget: text}
           - {label: Strapline, name: strapline, widget: string}
           - {label: "Text", name: "body", widget: "markdown"}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: SEO Title, name: meta_title, widget: string}
+              - {label: SEO Description, name: meta_description, widget: text}
   - name: "blog"
     label: "Blog"
     folder: "site/content/blog"
@@ -86,7 +111,6 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: SEO Description, name: meta_description, widget: text}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Cover Image", name: cover_image, widget: image}
       - {label: "Content", name: "body", widget: "markdown"}
@@ -99,7 +123,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Collection", name: "collection", widget: "hidden", default: "single"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: SEO Description, name: meta_description, widget: text}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Strapline", name: "strapline", widget: "string", "required" : false}
       - {label: "Intro", name: "intro", widget: "markdown", "required" : false}
@@ -112,3 +135,9 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Name, name: name, widget: string}
           - {label: Url, name: url, widget: image}
+      - label: "SEO"
+        name: seo
+        widget: "object"
+        fields:
+          - {label: SEO Title, name: meta_title, widget: string}
+          - {label: SEO Description, name: meta_description, widget: text}

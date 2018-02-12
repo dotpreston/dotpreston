@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <base href="{{ $.Site.BaseURL }}">
 
-  <title>{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ index .Site.Data.settings "global_meta_description" }}{{ end }}</title>
+  {{ if and (isset .Params "collection") (eq .Params.collection "single") }}
+  <title>{{ htmlUnescape .Title }} | DOT</title>
+  {{ else }}
+  <title>{{ htmlUnescape .Title }} | DOT</title>
+  {{ end }}
   <meta name="description" content="{{ if isset .Params "meta_description" }}{{ .Params.meta_description }}{{ else }}{{ index .Site.Data.settings "global_meta_description" }}{{ end }}">
   <meta name="keywords" content="{{ index .Site.Data.settings "global_meta_keywords" }}">
 
@@ -65,7 +69,7 @@
 
 <nav class="c-nav jsMenu" role="navigation">
   <span class="c-nav__close jsMenuClose">
-    <img src="https://dotpreston.co.uk/assets/images/nav_close_icon.svg" class="u-grow">
+    <img src="img/nav_close_icon.svg" class="u-grow">
   </span>
 
   <ul class="c-nav__links t2 list-reset">
@@ -94,7 +98,7 @@
             {{ if and (isset .Params "collection") (eq .Params.collection "single") }}
             <h2 class="t3 pl3">{{ if eq .Section "blog"  }}Blog{{ else }}Projects{{ end }}</h2>
             {{ else }}
-            <h1 class="t3 pl3">{{ .Title }}</h1>
+            <h1 class="t3 pl3">{{ htmlUnescape .Title }}</h1>
             {{ end }}
           </div>
         </div>
