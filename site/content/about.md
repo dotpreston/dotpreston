@@ -34,7 +34,7 @@ skills: |-
   Back End Development
   Mario Kart SNES
 seo:
-  meta_title: 'About | DOT web design Preston, Lancashire'
+  meta_title: 'Contact | DOT web design Preston, Lancashire'
 ---
 A programmer at heart since discovering Sinclair Basic on my ZX Spectrum back in the 80s. Although I never dreamt that this could lead to a career in web development.
 
