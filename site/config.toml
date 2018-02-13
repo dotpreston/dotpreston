@@ -2,6 +2,7 @@ baseurl = "/"
 languageCode = "en-gb"
 languageLang = "en"
 title = "DOT"
+googleAnalytics = "UA-102566888-1"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
@@ -9,7 +10,6 @@ title = "DOT"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
-    description = "Hello world"
     domain = "https://dotpreston.co.uk"
     tel = "07917 797788"
     email = "andy@dotpreston.co.uk"

@@ -7,9 +7,11 @@
                 <p>{{ .Params.intro }}</p>
                 <hr>
             </section>
+            {{ if isset .Params "image" }}
             <div class="center mb4">
-                <img src="https://dotpreston.co.uk/thumbs/about/windle-150x150.jpg" class="circle" alt="AndY Windle">
+                <img src="{{ .Params.image }}" class="circle" alt="Andy Windle">
             </div>
+            {{ end }}
 
             {{ .Content }}
 
